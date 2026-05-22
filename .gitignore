@@ -1,0 +1,8 @@
+### VS Code ###
+.vscode/
+
+
+### Local Testing ###
+venv
+instance
+__pycache__

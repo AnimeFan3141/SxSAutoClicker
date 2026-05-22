@@ -1,0 +1,1 @@
+This is an autoclicker created to automate the daily dungeon for clears
