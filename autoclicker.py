@@ -46,11 +46,11 @@ while True:
                 # Wait a few seconds to avoid clicking too fast
                 time.sleep(2)
 
-                tempImg1 = pyautogui.locateCenterOnScreen('./imgs/normal.png', confidence=0.6, region=region)
+                #tempImg1 = pyautogui.locateCenterOnScreen('./imgs/normal.png', confidence=0.6, region=region)
                 # Click to go to normal mode
-                pyautogui.click(tempImg1.x, tempImg1.y)
+                #pyautogui.click(tempImg1.x, tempImg1.y)
                 # Wait a few seconds to avoid clicking too fast
-                time.sleep(2)
+                #time.sleep(2)
 
                 tempImg2 = pyautogui.locateCenterOnScreen('./imgs/match.png', confidence=0.6, region=region)
                 # Click to start matching
