@@ -95,7 +95,6 @@ while True:
                 if checkReady is not None and counter < 2:
                     pyautogui.click(checkReady.x, checkReady.y)
                     counter = counter + 1
-                    print("Counter =", counter)
                     time.sleep(1)
                 if counter >= 2:
                     break
