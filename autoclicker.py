@@ -30,13 +30,15 @@ state4 = False #Dungeon entered to start screen
 print("Auto clicker started. Press Ctrl+C in your terminal to stop.")
 print("Looking for images...")
 
+currentDungeon = './imgs/mechasummit.png'
+
 while True:
     if state3 == False and state4 == False:
         print(".")
     try:
 
         if state1:
-            img1 = pyautogui.locateCenterOnScreen('./imgs/auroradrasil.png', confidence=0.6, region=region)
+            img1 = pyautogui.locateCenterOnScreen(currentDungeon, confidence=0.6, region=region)
             if img1 is not None:
                 print("Image1 found")
                 state1 = False
@@ -92,7 +94,7 @@ while True:
                 time.sleep(2)
 
         if state4:                
-            img3 = pyautogui.locateOnScreen('./imgs/cleared.png', confidence=0.6, region=region)
+            img3 = pyautogui.locateOnScreen('./imgs/clearedD2.png', confidence=0.6, region=region)
             if img3 is not None:
                 print("Image3 found")
                 state3 = False
