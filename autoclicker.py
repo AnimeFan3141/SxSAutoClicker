@@ -63,7 +63,7 @@ while True:
             else:
                 time.sleep(2)
 
-        if state2:
+        if state2 or state3:
             img2 = pyautogui.locateCenterOnScreen('./imgs/accept.png', confidence=0.7, region=region)
             if img2 is not None:
                 print("Image2 found")
@@ -86,11 +86,6 @@ while True:
                 print("Dungeon entered")
                 time.sleep(90)
             else:
-                matchmaking = pyautogui.locateOnScreen('./imgs/matchmaking.png', confidence=0.6, region=region)
-                if matchmaking is not None:
-                    print("Matchmaking...")
-                    state3 = False
-                    state2 = True
                 time.sleep(2)
 
         if state4:                
