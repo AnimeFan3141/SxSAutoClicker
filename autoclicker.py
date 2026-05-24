@@ -59,8 +59,10 @@ while True:
 
                 if dungeonDifficulty == 'normal':
                     tempImg1 = find_image('./imgs/normal.png')
-                    #Click to go to normal mode
-                    pyautogui.click(tempImg1.x, tempImg1.y)
+                    if tempImg1 is not None:
+                        #Click to go to normal mode
+                        pyautogui.click(tempImg1.x, tempImg1.y)
+                        time.sleep(0.5)
 
                 tempImg2 = find_image('./imgs/match.png')
                 # Click to start matching
