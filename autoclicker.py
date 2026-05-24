@@ -105,11 +105,12 @@ while True:
                     state4 = False
                     state1 = True
                     tempImg3 = find_image('./imgs/backbutton.png')
-                    # Click the center coordinates of the found image
-                    pyautogui.click(tempImg3.x, tempImg3.y)
-                    print("Run completed")
-                    time.sleep(0.1)
-                    break
+                    if tempImg3 is not None:
+                        # Click the center coordinates of the found image
+                        pyautogui.click(tempImg3.x, tempImg3.y)
+                        print("Run completed")
+                        time.sleep(0.1)
+                        break
         
         time.sleep(0.1)
 
