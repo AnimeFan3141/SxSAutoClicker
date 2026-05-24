@@ -43,6 +43,7 @@ print("Looking for images...")
 
 ## Change this variable to switch between different dungeons. Make sure to update the image in the imgs folder as well.
 currentDungeon = './imgs/Dungeons/mechasummit.png'
+dungeonDifficulty = 'normal' #normal or hard
 
 while True:
     try:
@@ -56,9 +57,10 @@ while True:
                 pyautogui.click(img1.x, img1.y)
                 time.sleep(0.5)
 
-                #tempImg1 = find_image('./imgs/normal.png')
-                # Click to go to normal mode
-                #pyautogui.click(tempImg1.x, tempImg1.y)
+                if dungeonDifficulty == 'normal':
+                    tempImg1 = find_image('./imgs/normal.png')
+                    #Click to go to normal mode
+                    pyautogui.click(tempImg1.x, tempImg1.y)
 
                 tempImg2 = find_image('./imgs/match.png')
                 # Click to start matching
