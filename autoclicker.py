@@ -81,7 +81,7 @@ while True:
                 print("Loading...")
 
         if state3:
-            entered = find_image('./imgs/enteredDungeon.png')
+            entered = find_image('./imgs/ready.png')
             if entered is not None:
                 state3 = False
                 state4 = True
