@@ -38,12 +38,13 @@ state2 = False #Matching to accept
 state3 = False #Match accepted to dungeon entered
 state4 = False #Dungeon entered to start screen
 
+## Change this variable to switch between different dungeons. Make sure to update the image in the imgs folder as well.
+currentDungeon = './imgs/Dungeons/' + input("Enter dungeon name: ") + '.png'
+dungeonDifficulty = input("Enter dungeon difficulty (normal/hard): ") #normal or hard
+dungeonRunCounter = 0
+
 print("Auto clicker started. Press Ctrl+C in your terminal to stop.")
 print("Looking for images...")
-
-## Change this variable to switch between different dungeons. Make sure to update the image in the imgs folder as well.
-currentDungeon = './imgs/Dungeons/mechasummit.png'
-dungeonDifficulty = 'normal' #normal or hard
 
 while True:
     try:
@@ -113,6 +114,7 @@ while True:
                         # Click the center coordinates of the found image
                         pyautogui.click(tempImg3.x, tempImg3.y)
                         print("Run completed")
+                        dungeonRunCounter = dungeonRunCounter + 1
                         time.sleep(0.1)
                         break
         
@@ -120,4 +122,5 @@ while True:
 
     except KeyboardInterrupt:
         print("Auto clicker stopped.")
+        print("Total runs completed: ", dungeonRunCounter)
         break
