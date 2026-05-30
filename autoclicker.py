@@ -103,6 +103,7 @@ while True:
                     time.sleep(1)
                 if counter >= 2:
                     break
+                time.sleep(0.1)
             print("Waiting for run to complete...")
             while True:
                 img3 = find_image('./imgs/cleared.png')
@@ -117,6 +118,11 @@ while True:
                         dungeonRunCounter = dungeonRunCounter + 1
                         time.sleep(0.1)
                         break
+                time.sleep(0.1)
+            tempImg4 = find_image('./imgs/noclaim.png')
+            if tempImg4 is not None:
+                # Click the center coordinates of the found image
+                pyautogui.click(tempImg4.x, tempImg4.y)
         
         time.sleep(0.1)
 
